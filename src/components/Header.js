@@ -20,10 +20,10 @@ export default function Header() {
                 {isMobile ? <button className="material-icons toggle-menu" onClick={() => setMenuOpen(!menuOpen)}>menu</button> : <></>}
                 <ul className={isMobile ? (menuOpen ? 'mobile open' : 'mobile') : ''}>
                     <button className="material-icons close-menu" onClick={() => setMenuOpen(false)}>arrow_forward</button>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Skills</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
                 </ul>
             </div>
         </HeaderContainer>

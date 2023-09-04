@@ -6,6 +6,11 @@ export const Header = styled.header`
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
     padding: 0 20px;
     background-color: var(--primary);
     border-bottom: 3px solid var(--secondary);
@@ -65,8 +70,10 @@ export const Header = styled.header`
         bottom: 0;
         right: 0;
         background-color: var(--primary);
+        border-left: 3px solid var(--secondary);
         transform: translateX(100%);
         transition: 0.4s;
+        z-index: 99;
 
         &.open {
             transform: translateX(0%);

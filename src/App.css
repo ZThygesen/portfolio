@@ -16,3 +16,20 @@
     color: var(--primary);
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+#home,
+#experience,
+#projects,
+#skills {
+    scroll-margin-top: var(--header-height);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--header-height);
+}
