@@ -1,10 +1,18 @@
-body {
+:root {
+    --primary: #1a2238;
+    --secondary: #ff6a3d;
+    --tertiary: #f0cc48;
+
+    --header-height: 100px;
+}
+
+* {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 16px;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
-    color: #000;
+    color: var(--primary);
     box-sizing: border-box;
 }
