@@ -15,7 +15,7 @@ export default function Header() {
 
     return (
         <HeaderContainer>
-            <div className="logo">Zach Thygesen</div>
+            <h1 className="logo">Zach Thygesen</h1>
             <div>
                 {isMobile ? <button className="material-icons toggle-menu" onClick={() => setMenuOpen(!menuOpen)}>menu</button> : <></>}
                 <ul className={isMobile ? (menuOpen ? 'mobile open' : 'mobile') : ''}>

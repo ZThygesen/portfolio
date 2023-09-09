@@ -35,8 +35,8 @@ export const Home = styled.div`
         gap: 8px;
     }
 
-    .about-text h1 {
-        font-size: 24px;
+    .about-text h2 {
+        font-size: 32px;
         font-weight: 900;
     }
 

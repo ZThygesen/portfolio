@@ -16,7 +16,7 @@ export const Header = styled.header`
     border-bottom: 3px solid var(--secondary);
 
     .logo {
-        font-size: 28px;
+        font-size: 36px;
         font-weight: 900;
         color: var(--secondary);
         letter-spacing: 1.5px;
