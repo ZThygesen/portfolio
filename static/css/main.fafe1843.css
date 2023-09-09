@@ -1,0 +1,2 @@
+:root{--primary:#1a2238;--secondary:#ff6a3d;--tertiary:#f0cc48;--alt-bg:#efefef;--header-height:100px}*{border:0;box-sizing:border-box;color:#1a2238;color:var(--primary);font-family:Roboto,sans-serif;font-size:16px;font-weight:400;margin:0;padding:0}html{scroll-behavior:smooth}#experience,#home,#projects,#skills{scroll-margin-top:100px;scroll-margin-top:var(--header-height)}.content{display:flex;flex-direction:column;margin-top:100px;margin-top:var(--header-height)}
+/*# sourceMappingURL=main.fafe1843.css.map*/
