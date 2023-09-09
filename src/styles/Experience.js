@@ -20,12 +20,12 @@ export const Experience = styled.div`
         border-left: 4px solid var(--primary);
         position: relative;
 
-        &:last-child {
+        &:last-of-type {
             border-color: transparent;
             padding-bottom: 8px;
         }
 
-        &:nth-last-child(2) {
+        &:nth-last-of-type(2) {
             padding-bottom: 12px;
         }
 
@@ -76,26 +76,4 @@ export const Experience = styled.div`
             list-style-type: none;
         }
     }
-
-    /* @media (min-width: 768px) {
-        .experience-card {
-            width: 50%;
-
-            &:nth-of-type(odd) {
-                padding: 0 24px 32px 0;
-                border: none;
-                border-right: 4px solid var(--primary);
-                text-align: right;
-
-                & .timeline-bullet {
-                    left: calc(100% - 6px);
-                }
-            }
-
-            &:nth-of-type(even) {
-                margin-left: 50%;
-            }
-
-        }
-    } */
 `;
