@@ -39,25 +39,28 @@ export default function Experience() {
 
     return (
         <ExperienceContainer id="experience">
-            <h2>Experience</h2>
-            <div className="experiences">
-                {experiences.map((experience, index) => (
-                    <div className="experience-card" key={index}>
-                        <div className="timeline-bullet"></div>
-                        <div className="date">{experience.date}</div>
-                        <h3 className="title">{experience.title}</h3>
-                        <div className="company-info">
-                            <div>{experience.company}</div>
-                            &#8226;
-                            <div>{experience.location}</div>
+            <div>
+                <h2>Experience</h2>
+                <div className="experiences">
+                    {experiences.map((experience, index) => (
+                        <div className="experience-card" key={index}>
+                            <div className="timeline-bullet"></div>
+                            <div className="date">{experience.date}</div>
+                            <h3 className="title">{experience.title}</h3>
+                            <div className="company-info">
+                                <div>{experience.company}</div>
+                                &#8226;
+                                <div>{experience.location}</div>
+                            </div>
+                            <ul className="info">
+                                {experience.info.map((infoBullet, index) => (
+                                    <li key={index}>{infoBullet}</li>
+                                ))}
+                            </ul>
                         </div>
-                        <ul className="info">
-                            {experience.info.map((infoBullet, index) => (
-                                <li key={index}>{infoBullet}</li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
+                    ))}
+                    <div className="experience-card"><div className="timeline-start"></div></div>
+                </div>
             </div>
         </ExperienceContainer>
     );

@@ -14,17 +14,19 @@ export default function Header() {
     });
 
     return (
-        <HeaderContainer>
-            <h1 className="logo">Zach Thygesen</h1>
+        <HeaderContainer id="header">
             <div>
-                {isMobile ? <button className="material-icons toggle-menu" onClick={() => setMenuOpen(!menuOpen)}>menu</button> : <></>}
-                <ul className={isMobile ? (menuOpen ? 'mobile open' : 'mobile') : ''}>
-                    <button className="material-icons close-menu" onClick={() => setMenuOpen(false)}>arrow_forward</button>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                </ul>
+                <h1 className="logo">Zach Thygesen</h1>
+                <div>
+                    {isMobile ? <button className="material-icons toggle-menu" onClick={() => setMenuOpen(!menuOpen)}>menu</button> : <></>}
+                    <ul className={isMobile ? (menuOpen ? 'mobile open' : 'mobile') : ''}>
+                        <button className="material-icons close-menu" onClick={() => setMenuOpen(false)}>arrow_forward</button>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                    </ul>
+                </div>
             </div>
         </HeaderContainer>
     );

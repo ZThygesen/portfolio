@@ -2,10 +2,6 @@ import { styled } from 'styled-components';
 
 export const Header = styled.header`
     height: var(--header-height);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,6 +10,16 @@ export const Header = styled.header`
     padding: 0 20px;
     background-color: var(--primary);
     border-bottom: 3px solid var(--secondary);
+
+    & > div {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 0 auto;
+    }
 
     .logo {
         font-size: 36px;

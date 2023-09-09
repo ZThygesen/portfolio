@@ -29,8 +29,20 @@ html {
     scroll-margin-top: var(--header-height);
 }
 
+#header > *,
+#home > * {
+    max-width: 1200px;
+}
+
 .content {
     display: flex;
     flex-direction: column;
     margin-top: var(--header-height);
 }
+
+h2 {
+    font-weight: 900;
+    font-size: 32px;
+}
+
+

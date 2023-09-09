@@ -3,15 +3,23 @@ import { styled } from 'styled-components';
 export const Home = styled.div`
     min-height: calc(100vh - var(--header-height));
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32px;
     background-color: var(--primary);
     padding: 20px;
 
+    & > div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        margin: auto;
+    }
+
     .about-container {
-        max-width: 800px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -33,11 +41,6 @@ export const Home = styled.div`
         display: flex;
         flex-direction: column;
         gap: 8px;
-    }
-
-    .about-text h2 {
-        font-size: 32px;
-        font-weight: 900;
     }
 
     .about-text p {

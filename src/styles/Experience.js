@@ -1,14 +1,15 @@
 import { styled } from 'styled-components';
 
 export const Experience = styled.div`
-    display: flex;
-    flex-direction: column;
     background-color: var(--alt-bg);
     padding: 20px;
 
+    & > div {
+        max-width: 1200px;
+        margin: auto;
+    }
+
     h2 {
-        font-weight: 900;
-        font-size: 32px;
         margin-bottom: 32px;
     }
 
@@ -19,17 +20,30 @@ export const Experience = styled.div`
         border-left: 4px solid var(--primary);
         position: relative;
 
-        &:last-of-type {
+        &:last-child {
+            border-color: transparent;
+            padding-bottom: 8px;
+        }
+
+        &:nth-last-child(2) {
             padding-bottom: 12px;
         }
 
         & .timeline-bullet {
             width: 16px;
             height: 16px;
-            background-color: var(--primary);
+            background-color: var(--secondary);
             border-radius: 50%;
             position: absolute;
             right: calc(100% - 6px);
+        }
+
+        & .timeline-start {
+            width: 20px;
+            height: 4px;
+            background-color: var(--primary);
+            position: absolute;
+            right: calc(100% - 8px);
         }
 
         & .date {
