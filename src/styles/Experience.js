@@ -54,8 +54,6 @@ export const Experience = styled.div`
         }
 
         & .title {
-            font-weight: 700;
-            font-size: 24px;
             margin-bottom: 8px;
         }
 
