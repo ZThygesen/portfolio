@@ -8,11 +8,13 @@ import html from './icons/html.png';
 import java from './icons/java.png';
 import javascript from './icons/javascript.png';
 import linux from './icons/linux.png';
+import mui from './icons/mui.png';
 import node from './icons/node.png';
 import python from './icons/python.png';
 import react from './icons/react.png';
 import ror from './icons/ror.png';
 import sql from './icons/sql.png';
+import styled from './icons/styled.png';
 import typescript from './icons/typescript.png';
 
 export const skills = [
@@ -57,6 +59,10 @@ export const skills = [
         skill: 'Linux'
     },
     {
+        image: mui,
+        skill: 'MUI'
+    },
+    {
         image: node,
         skill: 'Node'
     },
@@ -77,7 +83,11 @@ export const skills = [
         skill: 'SQL'
     },
     {
+        image: styled,
+        skill: 'Styled Components'
+    },
+    {
         image: typescript,
         skill: 'TypeScript'
     }
-]
+];

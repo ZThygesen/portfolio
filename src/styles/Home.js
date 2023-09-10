@@ -20,6 +20,7 @@ export const Home = styled.div`
     }
 
     .about-container {
+        max-width: 800px;
         display: flex;
         flex-direction: column;
         align-items: center;

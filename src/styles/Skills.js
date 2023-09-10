@@ -3,13 +3,19 @@ import { styled } from 'styled-components';
 export const Skills = styled.div`
     padding: 20px;
 
+    & > div {
+        max-width: 1200px;
+        margin: auto;
+    }
+
     h2 {
         margin-bottom: 32px;
+        text-align: center;
     }
 
     .skills {
         display: flex;
-        align-items: center;
+        align-items: stretch;
         justify-content: center;
         gap: 28px;
         flex-wrap: wrap;
@@ -17,17 +23,20 @@ export const Skills = styled.div`
     }
 
     .skill {
+        width: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 8px;
+        text-align: center;
         padding: 12px 16px;
         border-radius: 16px;
         box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
         animation: float 4s ease-in-out infinite;
         transform: translateY(0px);
-        transition: all 0.2s !important;
+        transition: 0.1s;
+        cursor: default;
 
         &:nth-of-type(2n + 1) {
             animation-delay: 1s;

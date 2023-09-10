@@ -72,8 +72,8 @@ export const Experience = styled.div`
         & .info {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            list-style-type: none;
+            gap: 4px;
+            list-style: inside;
         }
     }
 `;
