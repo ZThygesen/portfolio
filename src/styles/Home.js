@@ -53,20 +53,20 @@ export const Home = styled.div`
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-    }
 
-    .nav-links a {
-        width: 120px;
-        text-align: center;
-        text-decoration: none;
-        padding: 10px 0;
-        background-color: #FFF;
-        border-radius: 12px;
-        transition: 0.2s;
+        & a {
+            width: 120px;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 0;
+            background-color: #FFF;
+            border-radius: 12px;
+            transition: 0.2s;
 
-        &:hover {
-            box-shadow: 3px 3px var(--secondary);
-            transform: scale(1.1);
+            &:hover {
+                box-shadow: 3px 3px var(--secondary);
+                transform: scale(1.05);
+            }
         }
     }
 
