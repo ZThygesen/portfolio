@@ -80,11 +80,11 @@ export default function Project({ project }) {
                     <button className={`material-icons toggle-details ${detailsOpen ? 'rotate' : ''}`}>expand_more</button>
                 </div>
                 <div className="details" style={{ maxHeight: detailsOpen ? detailsHeight : 0 }}>
-                    <div ref={detailsRef}>
+                    <ul ref={detailsRef} className="details-list">
                         {project.descriptions.map((description, index) => (
-                            <p key={index}>{description}</p>
+                            <li key={index}>{description}</li>
                         ))}
-                    </div>
+                    </ul>
                 </div>
             </div>
         </ProjectContainer>

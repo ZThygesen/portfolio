@@ -2,6 +2,7 @@ import { styled } from 'styled-components';
 
 export const Skills = styled.div`
     padding: 20px;
+    margin-bottom: 32px;
 
     & > div {
         max-width: 1200px;

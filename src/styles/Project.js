@@ -66,7 +66,6 @@ export const Project = styled.div`
             user-select: none;
 
             & .toggle-details {
-                border-radius: 50%;
                 background: transparent;
                 cursor: pointer;
                 transition: 0.5s;
@@ -100,21 +99,41 @@ export const Project = styled.div`
         & .details {
             overflow: hidden !important;
             transition: max-height 0.5s ease;
+
+            & .details-list {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                list-style: outside;
+                padding-left: 18px;
+
+                & li {
+                    line-height: 1.5;
+                }
+            }
         }
     }
 
     & .carousel {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 8px;
 
         & .carousel-slider {
             overflow: unset;
+            /* background-color: #FFF;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 3px 3px  5px rgba(0, 0, 0, 0.2); */
 
             & .slide {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                & img {
+                    border-radius: 12px;
+                }
             }
 
             & .prev-arrow,
@@ -125,22 +144,29 @@ export const Project = styled.div`
                 padding: 4px;
                 cursor: pointer;
                 transition: 0.1s;
-
                 display: none;
 
                 &:hover {
                     background-color: #FFF;
+                    /* color: #FFF; */
                 }
             }
 
             & .control-dots {
-            top: 100%;
-            margin: 0;
+                top: 100%;
+                margin: 0;
 
                 & .dot {
                     background-color: var(--primary);
                 }
             }
+        }
+    }
+
+    @media (min-width: 480px) {
+        & .prev-arrow,
+        & .next-arrow {
+            display: block !important;
         }
     }
 `;

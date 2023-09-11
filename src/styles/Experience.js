@@ -70,8 +70,13 @@ export const Experience = styled.div`
         & .info {
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            list-style: inside;
+            gap: 8px;
+            list-style: outside;
+            padding-left: 18px;
+
+            & li {
+                line-height: 1.5;
+            }
         }
     }
 `;

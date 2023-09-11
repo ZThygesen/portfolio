@@ -8,13 +8,19 @@ export const Projects = styled.div`
         margin: auto;
     }
 
-    h2 {
+    & h2 {
         margin-bottom: 32px;
     }
 
-    .projects {
+    & .projects {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    @media (min-width: 480px) {
+        & .projects {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
     }
 `;
