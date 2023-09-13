@@ -1,6 +1,6 @@
 import weather1 from './images/weather_forecast/1.png';
 import weather2 from './images/weather_forecast/2.png';
-import hangman1 from './images/hangman/1.png'
+// import hangman1 from './images/hangman/1.png'
 
 export const projects = [
     {

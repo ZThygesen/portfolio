@@ -1,5 +1,4 @@
 import { styled } from 'styled-components';
-import bg from '../images/bg.jpg';
 
 export const Home = styled.div`
     min-height: calc(100vh - var(--header-height));
@@ -20,11 +19,9 @@ export const Home = styled.div`
         margin: auto;
     }
 
-    .about-container {
-        max-width: 800px;
+    .welcome-section {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 20px;
         background-color: #fff;
         border-radius: 20px;
@@ -33,10 +30,18 @@ export const Home = styled.div`
         margin: 0 auto;
     }
 
-    img {
-        width: 200px;
-        height: auto;
-        border-radius: 50%;
+    .about-container {
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        & img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+        }
     }
 
     .about-text {
@@ -47,6 +52,45 @@ export const Home = styled.div`
 
     .about-text p {
         line-height: 1.5;
+    }
+
+    .personal-info {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+
+        & a,
+        .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+
+            &:not(.phone-number) {
+                border: 1px solid transparent;
+                padding: 8px 12px;
+                border-radius: 12px;
+                box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+                transition: 0.2s;
+
+                &:hover {
+                    /* border-color: var(--primary); */
+                    box-shadow: 3px 3px 5px var(--secondary);
+                    transform: scale(1.05);
+                }
+            }
+
+            & p {
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+
+        img {
+            width: 32px;
+            height: auto;
+        }
     }
 
     .nav-links {
