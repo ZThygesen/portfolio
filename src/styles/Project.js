@@ -23,14 +23,14 @@ export const Project = styled.div`
         margin: 40px 0 24px 0;
 
         & a {
-            height: 52px;
             width: 176px;
+            height: 52px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
             text-decoration: none;
-            box-shadow: 3px 3px  5px rgba(0, 0, 0, 0.2);
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
             background-color: #FFF;
             border-radius: 12px;
             transition: 0.2s;
@@ -54,6 +54,10 @@ export const Project = styled.div`
     }
 
     & .details-container {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
         & .header {
             width: fit-content;
             display: flex;
@@ -78,7 +82,7 @@ export const Project = styled.div`
             &:after {
                 content: '';
                 position: absolute;
-                width: calc(100% - 4px);
+                width: calc(100% - 30px);
                 transform: scaleX(0);
                 height: 2px;
                 bottom: -1px;
@@ -106,6 +110,7 @@ export const Project = styled.div`
                 gap: 8px;
                 list-style: outside;
                 padding-left: 18px;
+                padding-bottom: 12px;
 
                 & li {
                     line-height: 1.5;
@@ -121,10 +126,6 @@ export const Project = styled.div`
 
         & .carousel-slider {
             overflow: unset;
-            /* background-color: #FFF;
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: 3px 3px  5px rgba(0, 0, 0, 0.2); */
 
             & .slide {
                 display: flex;

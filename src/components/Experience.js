@@ -41,6 +41,20 @@ export default function Experience() {
         <ExperienceContainer id="experience">
             <div>
                 <h2>Experience</h2>
+                <div className="education">
+                    <div className="date">August 2020 - May 2024</div>
+                    <h3 className="title">Texas A&M University</h3>
+                    <div className="education-info">
+                        <div>BS in Computer Science</div>
+                        <div className="dot-separator">&#8226;</div>
+                        <div className="location">College Station, TX</div>
+                    </div>
+                    <ul className="info">
+                        <li><span className="bold">GPA:</span> 3.9/4.0; Minor in Mathematics</li>
+                        <li><span className="bold">Relevant Coursework:</span> Data Structures & Algorithms, Programming Studio, Software Engineering, Human-Computer Interaction</li>
+                        <li><span className="bold">Activities:</span> The Turing Games 2022, TAMUhack 2022, HowdyHack 2021, Google Developer Student Club, Aggie Coding Club</li>
+                    </ul>
+                </div>
                 <div className="experiences">
                     {experiences.map((experience, index) => (
                         <div className="experience-card" key={index}>
@@ -48,9 +62,9 @@ export default function Experience() {
                             <div className="date">{experience.date}</div>
                             <h3 className="title">{experience.title}</h3>
                             <div className="company-info">
-                                <div>{experience.company}</div>
-                                &#8226;
-                                <div>{experience.location}</div>
+                                <div className="company">{experience.company}</div>
+                                <div className="dot-separator">&#8226;</div>
+                                <div className="location">{experience.location}</div>
                             </div>
                             <ul className="info">
                                 {experience.info.map((infoBullet, index) => (

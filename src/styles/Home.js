@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import bg from '../images/bg.jpg';
 
 export const Home = styled.div`
     min-height: calc(100vh - var(--header-height));

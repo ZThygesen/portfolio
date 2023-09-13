@@ -20,7 +20,7 @@ export const projects = [
     {
         title: 'Hangman',
         codeLink: 'https://github.com/ZThygesen/weather-forecast',
-        demoLink: 'https://zthygesen.github.io/weather-forecast/',
+        // demoLink: 'https://zthygesen.github.io/weather-forecast/',
         images: [
             { src: weather1, alt: 'Home Page of Weather Forecast App' },
             { src: weather2, alt: 'Future Forecast Feature' }
