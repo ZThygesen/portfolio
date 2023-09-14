@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+// import bg from '../images/bg.jpg';
 
 export const Home = styled.div`
     min-height: calc(100vh - var(--header-height));
@@ -48,6 +49,7 @@ export const Home = styled.div`
         display: flex;
         flex-direction: column;
         gap: 8px;
+        text-align: center;
     }
 
     .about-text p {
@@ -57,33 +59,27 @@ export const Home = styled.div`
     .personal-info {
         display: flex;
         justify-content: center;
-        gap: 24px;
+        gap: 8px;
         flex-wrap: wrap;
 
         & a,
         .phone-number {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
             text-decoration: none;
-
-            &:not(.phone-number) {
-                border: 1px solid transparent;
-                padding: 8px 12px;
-                border-radius: 12px;
-                box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-                transition: 0.2s;
-
-                &:hover {
-                    /* border-color: var(--primary); */
-                    box-shadow: 3px 3px 5px var(--secondary);
-                    transform: scale(1.05);
-                }
-            }
+            position: relative;
+            padding: 12px;
+            border-radius: 12px;
+            transition: 0.2s;
 
             & p {
                 font-size: 18px;
                 font-weight: 500;
+            }
+
+            &:not(.phone-number):hover {
+                box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.2);
             }
         }
 
@@ -117,13 +113,19 @@ export const Home = styled.div`
 
     @media (min-width: 480px) {
         gap: 60px;
-        
+
+        .nav-links {
+            flex-direction: row;
+        }
+    }
+
+    @media (min-width: 700px) {
         .about-container {
             flex-direction: row;
         }
 
-        .nav-links {
-            flex-direction: row;
+        .about-text {
+            text-align: left;
         }
     }
 

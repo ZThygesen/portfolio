@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+// import header from '../images/header.jpg';
 
 export const Header = styled.header`
     height: var(--header-height);
@@ -47,7 +48,8 @@ export const Header = styled.header`
         padding: 4px 0;
         transition: 0.1s;
 
-        &:hover {
+        &:hover,
+        &.active {
             color: var(--secondary);
         }
     }

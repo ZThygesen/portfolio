@@ -23,8 +23,6 @@ export default function Project({ project }) {
         setDetailsHeight(detailsRef.current.clientHeight);
     }, []);
 
-    console.log(detailsHeight);
-
     return (
         <ProjectContainer>
             <h3 className="title">{project.title}</h3>

@@ -30,7 +30,7 @@ export const Project = styled.div`
             justify-content: center;
             gap: 12px;
             text-decoration: none;
-            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.2);
             background-color: #FFF;
             border-radius: 12px;
             transition: 0.2s;
