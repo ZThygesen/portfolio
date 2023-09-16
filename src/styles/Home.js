@@ -23,8 +23,8 @@ export const Home = styled.div`
     .welcome-section {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        background-color: #fff;
+        gap: 8px;
+        background-color: #FFF;
         border-radius: 20px;
         padding: 20px;
         box-shadow: 5px 5px var(--secondary);

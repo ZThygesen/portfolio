@@ -55,7 +55,7 @@ export default function Project({ project }) {
                 ))}
             </Carousel>
             <div className="option-links">
-                {project.codeLink ?
+                {project.demoLink ?
                     <a href={project.demoLink} target="_blank" rel="noreferrer">
                         <p>Live Demo</p>
                         <img src={liveDemo} alt="Computer Screen" />
@@ -63,7 +63,7 @@ export default function Project({ project }) {
                     :
                     <></>
                 }
-                {project.demoLink ?
+                {project.codeLink ?
                     <a href={project.codeLink} target="_blank" rel="noreferrer">
                         <p>View Code</p>
                         <img src={github} alt="GitHub Logo" />

@@ -82,7 +82,7 @@ export const Project = styled.div`
             &:after {
                 content: '';
                 position: absolute;
-                width: calc(100% - 30px);
+                width: calc(100% - 29px);
                 transform: scaleX(0);
                 height: 2px;
                 bottom: -1px;
