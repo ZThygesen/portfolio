@@ -131,6 +131,7 @@ export const Project = styled.div`
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                cursor: pointer;
 
                 & img {
                     border-radius: 12px;
@@ -149,7 +150,6 @@ export const Project = styled.div`
 
                 &:hover {
                     background-color: #FFF;
-                    /* color: #FFF; */
                 }
             }
 

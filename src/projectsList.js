@@ -28,6 +28,15 @@ import battleship1 from './images/battleship/1.png';
 import battleship2 from './images/battleship/2.png';
 import battleship3 from './images/battleship/3.png';
 import battleship4 from './images/battleship/4.png';
+import pmc1 from './images/pmc_attendance/10.png';
+import pmc2 from './images/pmc_attendance/2.png';
+import pmc3 from './images/pmc_attendance/3.png';
+import pmc4 from './images/pmc_attendance/4.png';
+import pmc5 from './images/pmc_attendance/5.png';
+import pmc6 from './images/pmc_attendance/6.png';
+import pmc7 from './images/pmc_attendance/7.png';
+import pmc8 from './images/pmc_attendance/8.png';
+import pmc9 from './images/pmc_attendance/9.png';
 
 export const projects = [
     {
@@ -108,6 +117,42 @@ export const projects = [
             { src: sketch3, alt: 'Smiley face with background color changed' },
             { src: sketch4, alt: 'Demonstration of increasing the number of squares in the grid' },
             { src: sketch5, alt: 'Toggling off the gridlines' }
+        ],
+        descriptions: [
+            'Technologies: JavaScript, HTML, CSS',
+            'This web application is a modernized, digital version of Etch-A-Sketch. Choose from several different tools to create whatever beautiful (or terrifying) art your heart desires! There is a pen with any color of your choice, a rainbow, shade and eraser option, and you can even change the background color. You can also toggle the gridlines, reset the board and change the size of the grid.',
+            'This project makes heavy use of JavaScript to dynamically change the size of the grid, color the squares and toggle between different modes.'
+        ]
+    },
+    {
+        title: 'Battleship',
+        codeLink: 'https://github.com/ZThygesen/battleship',
+        demoLink: 'https://zthygesen.github.io/battleship/',
+        images: [
+            { src: battleship1, alt: 'Deploying battleships' },
+            { src: battleship2, alt: 'Start of game: displays both players\' boards (You vs Computer)' },
+            { src: battleship3, alt: 'Early-game view of boards' },
+            { src: battleship4, alt: 'Later-game view of boards' }
+        ],
+        descriptions: [
+            'Technologies: JavaScript, Jest, HTML, CSS',
+            'The game that everyone knows and loves: Battleship! Deploy your fleet of ships and take turns with the computer attacking each others\' fleets. Sink all of the computer\'s ships before it sinks yours to win.',
+            'This project was created in an effort to practice test-driven development. Unit tests were created throughout the development process using the JavaScrpt testing library Jest. This resulted in far fewer bugs that were much easier to fix and a reduction in code complexity.'
+        ]
+    },
+    {
+        title: 'Parsons Mounted Cavalry Attendance',
+        codeLink: 'https://github.com/ZThygesen/parsons-mounted-cavalry-attendance',
+        images: [
+            { src: pmc1, alt: 'Etch-A-Sketch interface with blank canvas' },
+            { src: pmc2, alt: 'Etch-A-Sketch interface with blank canvas' },
+            { src: pmc3, alt: 'Etch-A-Sketch interface with blank canvas' },
+            { src: pmc4, alt: 'Etch-A-Sketch interface with blank canvas' },
+            { src: pmc5, alt: 'Etch-A-Sketch interface with blank canvas' },
+            { src: pmc6, alt: 'Etch-A-Sketch interface with blank canvas' },
+            { src: pmc7, alt: 'Etch-A-Sketch interface with blank canvas' },
+            { src: pmc8, alt: 'Etch-A-Sketch interface with blank canvas' },
+            { src: pmc9, alt: 'Etch-A-Sketch interface with blank canvas' }
         ],
         descriptions: [
             'Technologies: JavaScript, HTML, CSS',
