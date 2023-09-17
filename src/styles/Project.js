@@ -147,6 +147,7 @@ export const Project = styled.div`
                 cursor: pointer;
                 transition: 0.1s;
                 display: none;
+                user-select: none;
 
                 &:hover {
                     background-color: #FFF;
