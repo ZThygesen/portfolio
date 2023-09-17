@@ -73,4 +73,8 @@ export const Skills = styled.div`
             transform: translateY(0px);
         }
     }
+
+    @media (min-width: 768px) {
+        padding: 40px;
+    }
 `;

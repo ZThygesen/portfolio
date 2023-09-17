@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Header as HeaderContainer } from '../styles/Header';
 
 export default function Header() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 720);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 840);
     const [menuOpen, setMenuOpen] = useState(false);
 
     const homeRef = useRef();
@@ -36,7 +36,7 @@ export default function Header() {
 
     useEffect(() => {
         function handleResize() {
-            setIsMobile(window.innerWidth < 720);
+            setIsMobile(window.innerWidth < 840);
         }
 
         window.addEventListener('resize', handleResize);

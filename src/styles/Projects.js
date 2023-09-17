@@ -23,4 +23,8 @@ export const Projects = styled.div`
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         }
     }
+
+    @media (min-width: 768px) {
+        padding: 40px;
+    }
 `;

@@ -107,4 +107,8 @@ export const Experience = styled.div`
             }
         }
     }
+
+    @media (min-width: 768px) {
+        padding: 40px;
+    }
 `;
