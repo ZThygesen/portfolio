@@ -22,7 +22,7 @@ export default function Header() {
             const threshold = Math.round(contentHeight * 0.7);
             refs.forEach(ref => {
                 const {top, bottom} = ref.element.getBoundingClientRect();
-                if (top < threshold && bottom > threshold) {
+                if (top < threshold && bottom >= threshold) {
                     ref.ref.current.classList.add('active');
                 } else {
                     ref.ref.current.classList.remove('active');
