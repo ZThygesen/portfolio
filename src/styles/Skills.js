@@ -5,7 +5,7 @@ export const Skills = styled.div`
     margin-bottom: 32px;
 
     & > div {
-        max-width: 1200px;
+        max-width: var(--max-width);
         margin: auto;
     }
 
@@ -21,7 +21,6 @@ export const Skills = styled.div`
         justify-content: center;
         gap: 28px;
         flex-wrap: wrap;
-
     }
 
     .skill {
@@ -40,17 +39,28 @@ export const Skills = styled.div`
         transform: translateY(0px);
         transition: 0.1s;
         cursor: default;
+        animation-delay: 1.5s;
 
         &:nth-of-type(2n + 1) {
-            animation-delay: 1s;
+            animation-delay: 2.5s;
         }
 
         &:nth-of-type(3n + 2) {
-            animation-delay: 2s;
+            animation-delay: 3.5s;
         }
 
         &:nth-of-type(4n + 3) {
-            animation-delay: 3s;
+            animation-delay: 4.5s;
+        }
+
+        &.reveal-animation {
+            position: relative;
+            opacity: 0;
+            transition: 1s all ease;
+
+            &.animate {
+                opacity: 1;
+            }
         }
     }
 

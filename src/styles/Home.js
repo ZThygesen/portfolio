@@ -6,9 +6,19 @@ export const Home = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: var(--primary); */
     padding: 20px;
-    
+
+    .reveal-animation {
+        position: relative;
+        transform: translateY(-150px);
+        opacity: 0;
+        transition: 2s all ease;
+
+        &.animate {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 
     & > div {
         width: 100%;

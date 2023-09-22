@@ -9,6 +9,7 @@
     --transparent-bg: rgba(255, 255, 255, 0.9);
 
     --header-height: 100px;
+    --max-width: 1280px;
 }
 
 * {
@@ -35,7 +36,7 @@ html {
 
 #header > *,
 #home > * {
-    max-width: 1200px;
+    max-width: var(--max-width);
 }
 
 .content {
@@ -61,13 +62,13 @@ h4 {
 
 @keyframes movingBackground {
     0% {
-        background-position: 0% 0%;
+        background-position: 0% 0;
     }
     50% {
-        background-position: 100% 0%;
+        background-position: 100% 0;
     }
     100% {
-        background-position: 0% 0%;
+        background-position: 0% 0;
     }
 }
 

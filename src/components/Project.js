@@ -32,7 +32,7 @@ export default function Project({ project }) {
 
     return (
         <>        
-            <ProjectContainer>
+            <ProjectContainer className="reveal-animation">
                 <h3 className="title">{project.title}</h3>
                 <Carousel
                     className="carousel"

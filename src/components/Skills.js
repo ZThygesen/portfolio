@@ -8,7 +8,7 @@ export default function Skills() {
                 <h2>Skills</h2>
                 <div className="skills">
                     {skills.map((skill, index) => (
-                        <div className="skill" key={index}>
+                        <div className="skill reveal-animation" style={{ transitionDelay: `${index * 0.075}s` }} key={index}>
                             <img src={skill.image} alt={skill.skill} />
                             <p>{skill.skill}</p>
                         </div>

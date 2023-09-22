@@ -11,7 +11,7 @@ export default function Home() {
 
     return (
         <HomeContainer id="home">
-            <div>
+            <div className="reveal-animation">
                 <div className="welcome-section">
                     <div className="about-container">
                         <img src={Headshot} alt="Zach Thygesen Headshot" />
@@ -35,7 +35,7 @@ export default function Home() {
                         <a href="https://www.linkedin.com/in/zach-thygesen/" target="_blank" rel="noreferrer"><img src={linkedin} alt="LinkedIn Profile" /></a>
                         <a href="https://github.com/ZThygesen" target="_blank" rel="noreferrer"><img src={github} alt="GitHub Account" /></a>
                         <a href={resume} target="_blank" rel="noreferrer">
-                           <img src={resumeIcon} alt="Resume Icon" />
+                            <img src={resumeIcon} alt="Resume Icon" />
                             <p>Resume</p>
                         </a>
                     </div>
