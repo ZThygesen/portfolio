@@ -6,8 +6,9 @@ export const Home = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
     padding: 20px;
+    
 
     & > div {
         width: 100%;
@@ -24,7 +25,7 @@ export const Home = styled.div`
         display: flex;
         flex-direction: column;
         gap: 8px;
-        background-color: #FFF;
+        background-color: var(--transparent-bg);
         border-radius: 20px;
         padding: 20px;
         box-shadow: 5px 5px var(--secondary);
@@ -100,7 +101,7 @@ export const Home = styled.div`
             text-align: center;
             text-decoration: none;
             padding: 10px 0;
-            background-color: #FFF;
+            background-color: var(--transparent-bg);
             border-radius: 12px;
             transition: 0.2s;
 

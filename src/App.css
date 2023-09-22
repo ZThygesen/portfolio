@@ -1,8 +1,12 @@
 :root {
     --primary: #1a2238;
+    --secondary: #ff8a66;
     --secondary: #ff6a3d;
+    /* --secondary: #ff6333; */
     --tertiary: #f0cc48;
+    --background-lines-color: #0a0d15;
     --alt-bg: #efefef;
+    --transparent-bg: rgba(255, 255, 255, 0.9);
 
     --header-height: 100px;
 }
@@ -55,4 +59,19 @@ h4 {
     font-size: 18px;
 }
 
+@keyframes movingBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.content {
+    animation: movingBackground 60s ease-in-out infinite;
+}
 

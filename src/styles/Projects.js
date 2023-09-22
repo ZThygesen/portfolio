@@ -9,6 +9,7 @@ export const Projects = styled.div`
     }
 
     & h2 {
+        color: #FFF;
         margin-bottom: 32px;
     }
 

@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 
 export const Experience = styled.div`
-    background-color: var(--alt-bg);
+    background-color: var(--transparent-bg);
     padding: 20px;
 
     & > div {

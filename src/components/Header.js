@@ -9,15 +9,15 @@ export default function Header() {
     const experienceRef = useRef();
     const projectsRef = useRef();
     const skillsRef = useRef();
-
+    
     useEffect(() => {
+        const home = {element: document.getElementById('home'), ref: homeRef};
+        const experience = {element: document.getElementById('experience'), ref: experienceRef};
+        const projects = {element: document.getElementById('projects'), ref: projectsRef};
+        const skills = {element: document.getElementById('skills'), ref: skillsRef};
+        const refs = [home, experience, projects, skills];
+        
         function setActiveTab() {
-            const home = {element: document.getElementById('home'), ref: homeRef};
-            const experience = {element: document.getElementById('experience'), ref: experienceRef};
-            const projects = {element: document.getElementById('projects'), ref: projectsRef};
-            const skills = {element: document.getElementById('skills'), ref: skillsRef};
-            const refs = [home, experience, projects, skills];
-
             const contentHeight = window.innerHeight - 100;
             const threshold = Math.round(contentHeight * 0.7);
             refs.forEach(ref => {
@@ -32,7 +32,7 @@ export default function Header() {
 
         window.addEventListener('scroll', setActiveTab);
         setActiveTab();
-    }, [])
+    }, []);
 
     useEffect(() => {
         function handleResize() {
