@@ -73,6 +73,131 @@ h4 {
 }
 
 .content {
-    animation: movingBackground 60s ease-in-out infinite;
+    /* animation: movingBackground 60s ease-in-out infinite; */
+    background: radial-gradient(circle at bottom, #303f69 0, #1a2238 70%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 0;
+    position: relative;
+}
+
+#stars-1,
+#stars-2,
+#stars-3 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center;
+    background-size: 200px 200px;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+#stars-1 {
+    animation: twinkle 20s ease-in-out infinite, move 15s ease-in-out infinite;
+    background-image:
+        radial-gradient(1px 1px at 109px 40px, #ff6a3d, #FFFFFF00),
+        radial-gradient(1px 1px at 47px 85px, #FFF, #FFFFFF00),
+        radial-gradient(1px 1px at 3px 56px, #ff6a3d, #FFFFFF00),
+        radial-gradient(1px 1px at 136px 157px, #FFF, #FFFFFF00),
+        radial-gradient(1px 1px at 17px 123px, #FFF, #FFFFFF00),
+        radial-gradient(1.5px 1.5px at 174px 39px, #FFF, #FFFFFF00),
+        radial-gradient(1.5px 1.5px at 150px 54px, #FFF, #FFFFFF00),
+        radial-gradient(1.5px 1.5px at 67px 194px, #ff6a3d, #FFFFFF00),
+        radial-gradient(1.5px 1.5px at 12px 162px, #FFF, #FFFFFF00),
+        radial-gradient(2px 2px at 20px 20px, #ff6a3d, #FFFFFF00),
+        radial-gradient(2px 2px at 79px 178px, #FFF, #FFFFFF00);
+}
+
+#stars-2 {
+    animation: twinkle 20s ease-in-out infinite, move 20s ease-in-out infinite;
+    animation-delay: 7s, 5s;
+    background-image:
+        radial-gradient(1px 1px at 2px 16px, #FFF, #FFFFFF00),
+        radial-gradient(1px 1px at 36px 160px, #ff6a3d, #FFFFFF00),
+        radial-gradient(1px 1px at 40px 135px, #FFF, #FFFFFF00),
+        radial-gradient(1px 1px at 83px 82px, #ff6a3d, #FFFFFF00),
+        radial-gradient(1px 1px at 169px 143px, #FFF, #FFFFFF00),
+        radial-gradient(1.5px 1.5px at 128px 12px, #FFF, #FFFFFF00),
+        radial-gradient(1.5px 1.5px at 56px 47px, #ff6a3d, #FFFFFF00),
+        radial-gradient(1.5px 1.5px at 86px 181px, #FFF, #FFFFFF00),
+        radial-gradient(1.5px 1.5px at 39px 127px, #FFF, #FFFFFF00),
+        radial-gradient(2px 2px at 63px 82px, #ff6a3d, #FFFFFF00),
+        radial-gradient(2px 2px at 156px 17px, #FFF, #FFFFFF00);
+}
+
+#stars-3 {
+    animation: twinkle 20s ease-in-out infinite, move 25s ease-in-out infinite;
+    animation-delay: 14s, 10s;
+    background-image:
+        radial-gradient(1px 1px at 1px 39px, #FFF, #FFFFFF00),
+        radial-gradient(1px 1px at 19px 183px, #ff6a3d, #FFFFFF00),
+        radial-gradient(1px 1px at 29px 173px, #FFF, #FFFFFF00),
+        radial-gradient(1px 1px at 13px 113px, #ff6a3d, #FFFFFF00),
+        radial-gradient(1px 1px at 183px 103px, #FFF, #FFFFFF00),
+        radial-gradient(1.5px 1.5px at 4px 149px, #FFF, #FFFFFF00),
+        radial-gradient(1.5px 1.5px at 164px 12px, #ff6a3d, #FFFFFF00),
+        radial-gradient(1.5px 1.5px at 111px 92px, #FFF, #FFFFFF00),
+        radial-gradient(1.5px 1.5px at 2px 120px, #FFF, #FFFFFF00),
+        radial-gradient(2px 2px at 23px 90px, #ff6a3d, #FFFFFF00),
+        radial-gradient(2px 2px at 100px 132px, #FFF, #FFFFFF00);
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0.4;
+    }
+
+    40% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+
+    60% {
+        opacity: 0.85;
+    }
+
+    80% {
+        opacity: 0.65;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+
+    20% {
+        transform: translateX(4px) translateY(-8px);
+    }
+
+    40% {
+        transform: translateX(-2px) translateY(-4px);
+    }
+
+    60% {
+        transform: translateX(0px) translateY(2px);
+    }
+
+    80% {
+        transform: translateX(-4px) translateY(6px);
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0px);
+    }
 }
 
