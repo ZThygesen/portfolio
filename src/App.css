@@ -50,9 +50,9 @@ h4 {
 }
 
 .background {
+    height: 100vh;
     background: radial-gradient(circle at bottom, #283557 0, #1a2238 45%);
     background-repeat: no-repeat;
-    background-attachment: fixed;
     z-index: -1;
     position: fixed;
     top: 0;
@@ -70,23 +70,23 @@ h4 {
     left: 0;
     right: 0;
     background-position: center;
-    background-size: 690px 690px;
+    background-size: 190px 190px;
     background-repeat: repeat;
     z-index: -1;
 }
 
 #stars-1 {
-    animation: twinkle 10s ease-in-out infinite, move 25s ease-in-out infinite;
+    animation: twinkle 10s ease-in-out infinite;
 }
 
 #stars-2 {
-    animation: twinkle 10s ease-in-out infinite, move 30s ease-in-out infinite;
-    animation-delay: 3s, 10s;
+    animation: twinkle 10s ease-in-out infinite;
+    animation-delay: 3s;
 }
 
 #stars-3 {
-    animation: twinkle 10s ease-in-out infinite, move 35s ease-in-out infinite;
-    animation-delay: 6s, 15s;
+    animation: twinkle 10s ease-in-out infinite;
+    animation-delay: 6s;
 }
 
 @keyframes twinkle {
@@ -162,6 +162,28 @@ h4 {
 
     100% {
         rotate: 0deg;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    #stars-1,
+    #stars-2,
+    #stars-3 {
+        background-size: 690px 690px;
+    }
+
+    #stars-1 {
+        animation: twinkle 10s ease-in-out infinite, move 25s ease-in-out infinite;
+    }
+    
+    #stars-2 {
+        animation: twinkle 10s ease-in-out infinite, move 30s ease-in-out infinite;
+        animation-delay: 3s, 10s;
+    }
+    
+    #stars-3 {
+        animation: twinkle 10s ease-in-out infinite, move 35s ease-in-out infinite;
+        animation-delay: 6s, 15s;
     }
 }
 

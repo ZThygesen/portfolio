@@ -62,14 +62,23 @@ function App() {
   }, [refs]);
   
   useEffect(() => {
-    window.addEventListener('scroll', throttle(scrollEffects, 10));
+    const throttleSpeed = isMobileRef.current ? 1000 : 10;
+    window.addEventListener('scroll', throttle(scrollEffects, throttleSpeed));
     scrollEffects();
   }, [isMobile, refs, scrollEffects]);
 
   useEffect(() => {
-    const numSmallStars = 40;
-    const numMediumStars = 25;
-    const numLargeStars = 12;
+    let starArea = 700;
+    let numSmallStars = 40;
+    let numMediumStars = 25;
+    let numLargeStars = 12;
+
+    if (isMobileRef.current) {
+      starArea = 200;
+      numSmallStars = 4;
+      numMediumStars = 2;
+      numLargeStars = 1;
+    }
 
     function getRandomNumber(min, max) {
       return Math.floor(Math.random() * (max - min) + min);
@@ -79,15 +88,15 @@ function App() {
       refs.forEach(ref => {
         let bgImageStr = '';
         for (let i = 0; i < numSmallStars; i++) {
-          bgImageStr += `radial-gradient(1px 1px at ${getRandomNumber(2, 698)}px ${getRandomNumber(2, 698)}px, #FFF, #FFFFFF00),`
+          bgImageStr += `radial-gradient(1px 1px at ${getRandomNumber(2, starArea - 2)}px ${getRandomNumber(2, starArea - 2)}px, #FFF, #FFFFFF00),`
         }
 
         for (let i = 0; i < numMediumStars; i++) {
-          bgImageStr += `radial-gradient(1.5px 1.5px at ${getRandomNumber(2, 698)}px ${getRandomNumber(1, 698)}px, #FFF, #FFFFFF00),`
+          bgImageStr += `radial-gradient(1.5px 1.5px at ${getRandomNumber(2, starArea - 2)}px ${getRandomNumber(1, starArea - 2)}px, #FFF, #FFFFFF00),`
         }
 
         for (let i = 0; i < numLargeStars; i++) {
-          bgImageStr += `radial-gradient(2px 2px at ${getRandomNumber(3, 697)}px ${getRandomNumber(3, 697)}px, #FFF, #FFFFFF00),`
+          bgImageStr += `radial-gradient(2px 2px at ${getRandomNumber(3, starArea - 3)}px ${getRandomNumber(3, starArea - 3)}px, #FFF, #FFFFFF00),`
         }
 
         bgImageStr = bgImageStr.slice(0, -1);
@@ -96,7 +105,7 @@ function App() {
     }
 
     generateStars();
-  }, [refs]);
+  }, [isMobile, refs]);
 
   return (
     <>
