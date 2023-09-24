@@ -7,7 +7,7 @@ import github from './icons/skills/github.png';
 import html from './icons/skills/html.png';
 import java from './icons/skills/java.png';
 import javascript from './icons/skills/javascript.png';
-import linux from './icons/skills/linux.png';
+import mongo from './icons/skills/mongo.png';
 import mui from './icons/skills/mui.png';
 import node from './icons/skills/node.png';
 import python from './icons/skills/python.png';
@@ -19,20 +19,52 @@ import typescript from './icons/skills/typescript.png';
 
 export const skills = [
     {
-        image: angular,
-        skill: 'Angular'
-    },
-    {
-        image: cpp,
-        skill: 'C++'
+        image: html,
+        skill: 'HTML'
     },
     {
         image: css,
         skill: 'CSS'
     },
     {
+        image: javascript,
+        skill: 'JavaScript'
+    },
+    {
+        image: typescript,
+        skill: 'TypeScript'
+    },
+    {
+        image: node,
+        skill: 'Node'
+    },
+    {
+        image: react,
+        skill: 'React'
+    },
+    {
         image: express,
         skill: 'Express'
+    },
+    {
+        image: mongo,
+        skill: 'MongoDB'
+    },
+    {
+        image: angular,
+        skill: 'Angular'
+    },
+    {
+        image: ror,
+        skill: 'Ruby on Rails'
+    },
+    {
+        image: styled,
+        skill: 'Styled Components'
+    },
+    {
+        image: mui,
+        skill: 'MUI'
     },
     {
         image: git,
@@ -43,51 +75,19 @@ export const skills = [
         skill: 'GitHub'
     },
     {
-        image: html,
-        skill: 'HTML'
+        image: python,
+        skill: 'Python'
+    },
+    {
+        image: cpp,
+        skill: 'C++'
     },
     {
         image: java,
         skill: 'Java'
     },
     {
-        image: javascript,
-        skill: 'JavaScript'
-    },
-    {
-        image: linux,
-        skill: 'Linux'
-    },
-    {
-        image: mui,
-        skill: 'MUI'
-    },
-    {
-        image: node,
-        skill: 'Node'
-    },
-    {
-        image: python,
-        skill: 'Python'
-    },
-    {
-        image: react,
-        skill: 'React'
-    },
-    {
-        image: ror,
-        skill: 'Ruby on Rails'
-    },
-    {
         image: sql,
         skill: 'SQL'
-    },
-    {
-        image: styled,
-        skill: 'Styled Components'
-    },
-    {
-        image: typescript,
-        skill: 'TypeScript'
     }
 ];
