@@ -41,6 +41,8 @@ export default function Project({ project }) {
                         autoPlay={!modalOpen}
                         interval={5000}
                         infiniteLoop={true}
+                        preventMovementUntilSwipeScrollTolerance={true}
+                        swipeScrollTolerance={20}
                         showStatus={false}
                         onClickItem={(_, item) => {
                             setModalImg({src: item.props.src, alt: item.props.alt});

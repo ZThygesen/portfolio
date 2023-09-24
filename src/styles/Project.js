@@ -178,7 +178,7 @@ export const Project = styled.div`
         }
     }
 
-    @media (min-width: 480px) {
+    @media (min-width: 481px) {
         & .prev-arrow,
         & .next-arrow {
             display: block !important;

@@ -17,31 +17,31 @@ export const Projects = styled.div`
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
-
-        & .reveal-animation {
-            position: relative;
-            transform: scale(0.7);
-            opacity: 0;
-            transition: 1s all ease;
-
-            &:nth-of-type(4n + 3) {
-                transition-delay: 0.15s;
-            }
-
-            &.animate {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
     }
 
-    @media (min-width: 480px) {
+    @media (min-width: 481px) {
         & .projects {
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+            & .reveal-animation {
+                position: relative;
+                transform: scale(0.7);
+                opacity: 0;
+                transition: 1s all ease;
+
+                &:nth-of-type(4n + 3) {
+                    transition-delay: 0.15s;
+                }
+
+                &.animate {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
         padding: 40px;
     }
 

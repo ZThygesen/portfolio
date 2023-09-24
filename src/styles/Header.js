@@ -112,7 +112,7 @@ export const Header = styled.header`
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
         padding: 0 40px;
     }
 `;

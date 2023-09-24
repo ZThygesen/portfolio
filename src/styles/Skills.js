@@ -52,16 +52,6 @@ export const Skills = styled.div`
         &:nth-of-type(4n + 3) {
             animation-delay: 4.5s;
         }
-
-        &.reveal-animation {
-            position: relative;
-            opacity: 0;
-            transition: 1s all ease;
-
-            &.animate {
-                opacity: 1;
-            }
-        }
     }
 
     .skill img {
@@ -86,7 +76,19 @@ export const Skills = styled.div`
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 481px) {
+        .reveal-animation {
+            position: relative;
+            opacity: 0;
+            transition: 1s all ease;
+
+            &.animate {
+                opacity: 1;
+            }
+        }
+    }
+
+    @media (min-width: 769px) {
         padding: 40px;
     }
 `;

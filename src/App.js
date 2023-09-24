@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import animateScrollTo from 'animated-scroll-to';
 import { throttle } from 'lodash';
 import Header from './components/Header';
@@ -10,25 +10,37 @@ import './App.css';
 
 export function handleScroll(element) {
   animateScrollTo(document.getElementById(element), {
-      cancelOnUserAction: false,
-      easing: (t) => { return (--t) * t * t + 1 },
-      speed: 750,
-      verticalOffset: -100
+    cancelOnUserAction: false,
+    easing: (t) => { return (--t) * t * t + 1 },
+    speed: 750,
+    verticalOffset: -100
   });
 }
 
 function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 481);
+  const isMobileRef = useRef(window.innerWidth < 481);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 481);
+      isMobileRef.current = window.innerWidth < 481;
+    }
+
+    window.addEventListener('resize', handleResize);
+  }, []);
+
   const starRef1 = useRef();
   const starRef2 = useRef();
   const starRef3 = useRef();
-  const refs = [
+  const refs = useMemo(() => [
     {ref: starRef1, velocity: 0.08},
     {ref: starRef2, velocity: 0.11},
     {ref: starRef3, velocity: 0.14}
-  ];
+  ], []);
 
-  useEffect(() => {
-    function scrollEffects() {
+  const scrollEffects = useCallback(() => {
+    if (!isMobileRef.current) {
       // parallax scrolling for background star layers
       const pos = window.scrollY;
       refs.forEach(ref => {
@@ -47,10 +59,12 @@ function App() {
         }
       });
     }
-
+  }, [refs]);
+  
+  useEffect(() => {
     window.addEventListener('scroll', throttle(scrollEffects, 10));
     scrollEffects();
-  });
+  }, [isMobile, refs, scrollEffects]);
 
   useEffect(() => {
     const numSmallStars = 40;
@@ -82,7 +96,7 @@ function App() {
     }
 
     generateStars();
-  });
+  }, [refs]);
 
   return (
     <>

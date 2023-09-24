@@ -8,18 +8,6 @@ export const Home = styled.div`
     justify-content: center;
     padding: 20px;
 
-    .reveal-animation {
-        position: relative;
-        transform: translateY(-150px);
-        opacity: 0;
-        transition: 2s all ease;
-
-        &.animate {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
     & > div {
         width: 100%;
         height: 100%;
@@ -122,8 +110,20 @@ export const Home = styled.div`
         }
     }
 
-    @media (min-width: 480px) {
+    @media (min-width: 481px) {
         gap: 60px;
+
+        .reveal-animation {
+            position: relative;
+            transform: translateY(-150px);
+            opacity: 0;
+            transition: 2s all ease;
+
+            &.animate {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
 
         .nav-links {
             flex-direction: row;
@@ -140,7 +140,7 @@ export const Home = styled.div`
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
         padding: 40px;
     }
 `;

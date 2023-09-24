@@ -4,20 +4,6 @@ export const Experience = styled.div`
     background-color: var(--transparent-bg);
     padding: 20px;
 
-    .reveal-animation {
-        position: relative;
-        transform: translateY(75px) rotateY(90deg) ;
-        transform-origin: top;
-        opacity: 0;
-        transition: 1s all ease;
-
-        &.animate {
-            transform: translateY(0px) rotateY(0deg);
-            opacity: 1;
-            box-shadow: none;
-        }
-    }
-
     & > div {
         max-width: var(--max-width);
         margin: auto;
@@ -108,7 +94,21 @@ export const Experience = styled.div`
         }
     }
 
-    @media (min-width: 480px) {
+    @media (min-width: 481px) {
+        .reveal-animation {
+            position: relative;
+            transform: translateY(75px) rotateY(90deg) ;
+            transform-origin: top;
+            opacity: 0;
+            transition: 1s all ease;
+
+            &.animate {
+                transform: translateY(0px) rotateY(0deg);
+                opacity: 1;
+                box-shadow: none;
+            }
+        }
+
         .education-info,
         .company-info {
             flex-direction: row;
@@ -119,7 +119,7 @@ export const Experience = styled.div`
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
         padding: 40px;
     }
 `;
