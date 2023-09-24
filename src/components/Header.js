@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
+import { handleScroll } from '../App'
+import { throttle } from 'lodash';
 import { Header as HeaderContainer } from '../styles/Header';
 
 export default function Header() {
@@ -11,13 +13,13 @@ export default function Header() {
     const skillsRef = useRef();
 
     useEffect(() => {
+        const home = {element: document.getElementById('home'), ref: homeRef};
+        const experience = {element: document.getElementById('experience'), ref: experienceRef};
+        const projects = {element: document.getElementById('projects'), ref: projectsRef};
+        const skills = {element: document.getElementById('skills'), ref: skillsRef};
+        const refs = [home, experience, projects, skills];
+        
         function setActiveTab() {
-            const home = {element: document.getElementById('home'), ref: homeRef};
-            const experience = {element: document.getElementById('experience'), ref: experienceRef};
-            const projects = {element: document.getElementById('projects'), ref: projectsRef};
-            const skills = {element: document.getElementById('skills'), ref: skillsRef};
-            const refs = [home, experience, projects, skills];
-
             const contentHeight = window.innerHeight - 100;
             const threshold = Math.round(contentHeight * 0.7);
             refs.forEach(ref => {
@@ -30,9 +32,9 @@ export default function Header() {
             });
         }
 
-        window.addEventListener('scroll', setActiveTab);
+        window.addEventListener('scroll', throttle(setActiveTab, 250));
         setActiveTab();
-    }, [])
+    }, []);
 
     useEffect(() => {
         function handleResize() {
@@ -40,20 +42,20 @@ export default function Header() {
         }
 
         window.addEventListener('resize', handleResize);
-    });
+    }, []);
 
     return (
         <HeaderContainer id="header">
             <div>
-                <h1 className="logo">Zach Thygesen</h1>
+                <h1 className="logo" onClick={() => handleScroll('home')}>Zach Thygesen</h1>
                 <div>
                     {isMobile ? <button className="material-icons toggle-menu" onClick={() => setMenuOpen(!menuOpen)}>menu</button> : <></>}
                     <ul className={isMobile ? (menuOpen ? 'mobile open' : 'mobile') : ''}>
                         <button className="material-icons close-menu" onClick={() => setMenuOpen(false)}>arrow_forward</button>
-                        <li><a href="#home" ref={homeRef}>Home</a></li>
-                        <li><a href="#experience" ref={experienceRef}>Experience</a></li>
-                        <li><a href="#projects" ref={projectsRef}>Projects</a></li>
-                        <li><a href="#skills" ref={skillsRef}>Skills</a></li>
+                        <li ref={homeRef} onClick={() => handleScroll('home')}>Home</li>
+                        <li ref={experienceRef} onClick={() => handleScroll('experience')}>Experience</li>
+                        <li ref={projectsRef} onClick={() => handleScroll('projects')}>Projects</li>
+                        <li ref={skillsRef} onClick={() => handleScroll('skills')}>Skills</li>
                     </ul>
                 </div>
             </div>

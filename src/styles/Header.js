@@ -1,5 +1,4 @@
 import { styled } from 'styled-components';
-// import header from '../images/header.jpg';
 
 export const Header = styled.header`
     height: var(--header-height);
@@ -23,10 +22,12 @@ export const Header = styled.header`
     }
 
     .logo {
+        text-decoration: none;
         font-size: 36px;
         font-weight: 900;
         color: var(--secondary);
         letter-spacing: 1.5px;
+        cursor: pointer;
     }
 
     ul {
@@ -39,14 +40,14 @@ export const Header = styled.header`
         display: none;
     }
 
-    ul a {
-        text-decoration: none;
+    ul li {
         color: #FFF;
-        display: block;
         font-size: 24px;
         text-align: center;
         padding: 4px 0;
+        cursor: pointer;
         transition: 0.1s;
+        user-select: none;
 
         &:hover,
         &.active {

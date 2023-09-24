@@ -4,7 +4,7 @@ export const Project = styled.div`
     height: fit-content;
     display: flex;
     flex-direction: column;
-    background-color: var(--alt-bg);
+    background-color: var(--transparent-bg);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 5px 5px var(--secondary);
@@ -31,7 +31,7 @@ export const Project = styled.div`
             gap: 12px;
             text-decoration: none;
             box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.2);
-            background-color: #FFF;
+            background-color: var(--transparent-bg);
             border-radius: 12px;
             transition: 0.2s;
 
@@ -114,6 +114,19 @@ export const Project = styled.div`
 
                 & li {
                     line-height: 1.5;
+                }
+
+                & .disclaimer {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    margin-left: -18px;
+                    gap: 11px;
+                    font-style: italic;
+
+                    &:after {
+                        content: '*';
+                        padding-top: 3px;
+                    }
                 }
             }
         }

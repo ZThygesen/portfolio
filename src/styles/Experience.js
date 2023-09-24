@@ -1,11 +1,25 @@
 import { styled } from 'styled-components';
 
 export const Experience = styled.div`
-    background-color: var(--alt-bg);
+    background-color: var(--transparent-bg);
     padding: 20px;
 
+    .reveal-animation {
+        position: relative;
+        transform: translateY(75px) rotateY(90deg) ;
+        transform-origin: top;
+        opacity: 0;
+        transition: 1s all ease;
+
+        &.animate {
+            transform: translateY(0px) rotateY(0deg);
+            opacity: 1;
+            box-shadow: none;
+        }
+    }
+
     & > div {
-        max-width: 1200px;
+        max-width: var(--max-width);
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -24,12 +38,7 @@ export const Experience = styled.div`
         position: relative;
 
         &:last-of-type {
-            border-color: transparent;
             padding-bottom: 8px;
-        }
-
-        &:nth-last-of-type(2) {
-            padding-bottom: 12px;
         }
     }
 
@@ -43,10 +52,12 @@ export const Experience = styled.div`
     }
 
     .timeline-start {
+        display: block;
         width: 20px;
         height: 4px;
         background-color: var(--primary);
         position: absolute;
+        top: 100%;
         right: calc(100% - 8px);
     }
 

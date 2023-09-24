@@ -41,7 +41,7 @@ export default function Experience() {
         <ExperienceContainer id="experience">
             <div>
                 <h2>Experience</h2>
-                <div className="education">
+                <div className="education reveal-animation">
                     <div className="date">August 2020 - May 2024</div>
                     <h3 className="title">Texas A&M University</h3>
                     <div className="education-info">
@@ -51,13 +51,13 @@ export default function Experience() {
                     </div>
                     <ul className="info">
                         <li><span className="bold">GPA:</span> 3.9/4.0; Minor in Mathematics</li>
-                        <li><span className="bold">Relevant Coursework:</span> Data Structures & Algorithms, Programming Studio, Software Engineering, Human-Computer Interaction</li>
+                        <li><span className="bold">Relevant Coursework:</span> Data Structures & Algorithms, Programming Languages, Programming Studio, Software Engineering, Human-Computer Interaction</li>
                         <li><span className="bold">Activities:</span> The Turing Games 2022, TAMUhack 2022, HowdyHack 2021, Google Developer Student Club, Aggie Coding Club</li>
                     </ul>
                 </div>
                 <div className="experiences">
                     {experiences.map((experience, index) => (
-                        <div className="experience-card" key={index}>
+                        <div className="experience-card reveal-animation" key={index}>
                             <div className="timeline-bullet"></div>
                             <div className="date">{experience.date}</div>
                             <h3 className="title">{experience.title}</h3>
@@ -71,9 +71,9 @@ export default function Experience() {
                                     <li key={index}>{infoBullet}</li>
                                 ))}
                             </ul>
+                            {index === experiences.length - 1 ? <div className="timeline-start"></div> : <></>}
                         </div>
                     ))}
-                    <div className="experience-card"><div className="timeline-start"></div></div>
                 </div>
             </div>
         </ExperienceContainer>

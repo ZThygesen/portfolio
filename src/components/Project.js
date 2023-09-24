@@ -32,58 +32,64 @@ export default function Project({ project }) {
 
     return (
         <>        
-            <ProjectContainer>
+            <ProjectContainer className="reveal-animation">
                 <h3 className="title">{project.title}</h3>
-                <Carousel
-                    className="carousel"
-                    showThumbs={false}
-                    autoPlay={!modalOpen}
-                    interval={5000}
-                    infiniteLoop={true}
-                    showStatus={false}
-                    onClickItem={(_, item) => {
-                        setModalImg({src: item.props.src, alt: item.props.alt});
-                        setModalOpen(true);
-                    }}  
-                    renderArrowPrev={(clickHandler, hasPrev) => {
-                        return (
-                            <button
-                                className={`material-icons prev-arrow ${hasPrev ? 'absolute' : 'hidden'}`}
-                                onClick={clickHandler}
-                            >chevron_left</button>
-                        )
-                    }}
-                    renderArrowNext={(clickHandler, hasNext) => {
-                        return (
-                            <button
-                                className={`material-icons next-arrow ${hasNext ? 'absolute' : 'hidden'}`}
-                                onClick={clickHandler}
-                            >chevron_right</button>
-                        )
-                    }}
-                >
-                    {project.images.map((image, index) => (
-                        <img src={image.src} alt={image.alt} key={index} />
-                    ))}
-                </Carousel>
-                <div className="option-links">
-                    {project.demoLink ?
-                        <a href={project.demoLink} target="_blank" rel="noreferrer">
-                            <p>Live Demo</p>
-                            <img src={liveDemo} alt="Computer Screen" />
-                        </a>
-                        :
-                        <></>
-                    }
-                    {project.codeLink ?
-                        <a href={project.codeLink} target="_blank" rel="noreferrer">
-                            <p>View Code</p>
-                            <img src={github} alt="GitHub Logo" />
-                        </a>
-                        :
-                        <></>
-                    }
-                </div>
+                {project.images ?
+                    <Carousel
+                        className="carousel"
+                        showThumbs={false}
+                        autoPlay={!modalOpen}
+                        interval={5000}
+                        infiniteLoop={true}
+                        showStatus={false}
+                        onClickItem={(_, item) => {
+                            setModalImg({src: item.props.src, alt: item.props.alt});
+                            setModalOpen(true);
+                        }}  
+                        renderArrowPrev={(clickHandler, hasPrev) => {
+                            return (
+                                <button
+                                    className={`material-icons prev-arrow ${hasPrev ? 'absolute' : 'hidden'}`}
+                                    onClick={clickHandler}
+                                >chevron_left</button>
+                            )
+                        }}
+                        renderArrowNext={(clickHandler, hasNext) => {
+                            return (
+                                <button
+                                    className={`material-icons next-arrow ${hasNext ? 'absolute' : 'hidden'}`}
+                                    onClick={clickHandler}
+                                >chevron_right</button>
+                            )
+                        }}
+                    >
+                        {project.images.map((image, index) => (
+                            <img src={image.src} alt={image.alt} loading="lazy" key={index} />
+                        ))}
+                    </Carousel>
+                    : <></>
+                }
+                {project.demoLink || project.codeLink ? 
+                    <div className="option-links">
+                        {project.demoLink ?
+                            <a href={project.demoLink} target="_blank" rel="noreferrer">
+                                <p>Live Demo</p>
+                                <img src={liveDemo} alt="Computer Screen" />
+                            </a>
+                            :
+                            <></>
+                        }
+                        {project.codeLink ?
+                            <a href={project.codeLink} target="_blank" rel="noreferrer">
+                                <p>View Code</p>
+                                <img src={github} alt="GitHub Logo" />
+                            </a>
+                            :
+                            <></>
+                        }
+                    </div>
+                    : <></>
+                }
                 <div className="details-container">
                     <div className={`header ${detailsOpen ? 'expanded' : ''}`} onClick={() => setDetailsOpen(!detailsOpen)}>
                         <h4>Project Details</h4>
@@ -94,6 +100,10 @@ export default function Project({ project }) {
                             {project.descriptions.map((description, index) => (
                                 <li key={index}>{description}</li>
                             ))}
+                            {project.disclaimer ? 
+                                <li className="disclaimer">{project.disclaimer}</li>
+                                : <></>
+                            }
                         </ul>
                     </div>
                 </div>

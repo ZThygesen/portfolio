@@ -6,8 +6,19 @@ export const Home = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary);
     padding: 20px;
+
+    .reveal-animation {
+        position: relative;
+        transform: translateY(-150px);
+        opacity: 0;
+        transition: 2s all ease;
+
+        &.animate {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 
     & > div {
         width: 100%;
@@ -24,7 +35,7 @@ export const Home = styled.div`
         display: flex;
         flex-direction: column;
         gap: 8px;
-        background-color: #FFF;
+        background-color: var(--transparent-bg);
         border-radius: 20px;
         padding: 20px;
         box-shadow: 5px 5px var(--secondary);
@@ -89,19 +100,19 @@ export const Home = styled.div`
         }
     }
 
-    .nav-links {
+    .nav-buttons {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
 
-        & a {
+        & button {
             width: 120px;
             text-align: center;
-            text-decoration: none;
             padding: 10px 0;
-            background-color: #FFF;
+            background-color: var(--transparent-bg);
             border-radius: 12px;
+            cursor: pointer;
             transition: 0.2s;
 
             &:hover {

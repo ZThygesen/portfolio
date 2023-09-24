@@ -1,10 +1,10 @@
 :root {
     --primary: #1a2238;
     --secondary: #ff6a3d;
-    --tertiary: #f0cc48;
-    --alt-bg: #efefef;
+    --transparent-bg: rgba(255, 255, 255, 0.8);
 
     --header-height: 100px;
+    --max-width: 1280px;
 }
 
 * {
@@ -18,26 +18,20 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-#home,
-#experience,
-#projects,
-#skills {
-    scroll-margin-top: var(--header-height);
+#root {
+    position: relative;
 }
 
 #header > *,
 #home > * {
-    max-width: 1200px;
+    max-width: var(--max-width);
 }
 
 .content {
     display: flex;
     flex-direction: column;
     margin-top: var(--header-height);
+    z-index: 1;
 }
 
 h2 {
@@ -55,4 +49,119 @@ h4 {
     font-size: 18px;
 }
 
+.background {
+    background: radial-gradient(circle at bottom, #283557 0, #1a2238 45%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#stars-1,
+#stars-2,
+#stars-3 {
+    position: fixed;
+    top: -1000px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center;
+    background-size: 690px 690px;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+#stars-1 {
+    animation: twinkle 10s ease-in-out infinite, move 25s ease-in-out infinite;
+}
+
+#stars-2 {
+    animation: twinkle 10s ease-in-out infinite, move 30s ease-in-out infinite;
+    animation-delay: 3s, 10s;
+}
+
+#stars-3 {
+    animation: twinkle 10s ease-in-out infinite, move 35s ease-in-out infinite;
+    animation-delay: 6s, 15s;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0.35;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0.25;
+    }
+
+    80% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes move {
+    0% {
+        rotate: 0deg;
+    }
+
+    10% {
+        rotate: -1deg;
+    }
+
+    20% {
+        rotate: -2deg;
+    }
+
+    30% {
+        rotate: -1deg;
+    }
+
+    40% {
+        rotate: 0deg;
+    }
+
+    50% {
+        rotate: -1deg;
+    }
+
+    60% {
+        rotate: 0deg;
+    }
+
+    70% {
+        rotate: 1deg;
+    }
+
+    80% {
+        rotate: 2deg;
+    }
+
+    90% {
+        rotate: 1deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
 

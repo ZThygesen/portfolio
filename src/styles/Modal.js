@@ -28,7 +28,7 @@ export const Modal = styled.div`
     }
 
     & img {
-        width: 85%;
+        width: 90%;
         max-width: 840px;
     }
 `;
