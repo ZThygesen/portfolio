@@ -115,6 +115,19 @@ export const Project = styled.div`
                 & li {
                     line-height: 1.5;
                 }
+
+                & .disclaimer {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    margin-left: -18px;
+                    gap: 11px;
+                    font-style: italic;
+
+                    &:after {
+                        content: '*';
+                        padding-top: 3px;
+                    }
+                }
             }
         }
     }

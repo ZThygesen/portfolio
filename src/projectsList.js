@@ -54,6 +54,23 @@ import weather4 from './images/weather_forecast/4.png';
 
 export const projects = [
     {
+        title: 'AI Central',
+        descriptions: [
+            'Overhauled the HTML, CSS, and JavaScript for the ACR\'s existing AI Central website to revamp its looks and allow for monetization of application.',
+            'Engaged in several meetings with development, designing, and marketing teams to review the current state and direction of application progress.'
+        ],
+        disclaimer: 'Cannot provide images for this project as they contain proprietary information of the American College of Radiology.'
+    },
+    {
+        title: 'Component Hub',
+        descriptions: [
+            'Constructed a component library containing over 40 website components for use by all in-house software developers at the American College of Radiology to maintain consistent styling across applications.',
+            'Organized components into an intuitive, navigable, and well-documented application.',
+            'Displayed all relevant code with each component along with a copy feature to greatly reduce development time.'
+        ],
+        disclaimer: 'Cannot provide images for this project as they contain proprietary information of the American College of Radiology.'
+    },
+    {
         title: 'Digital Closet',
         codeLink: 'https://github.com/ZThygesen/digital-closet',
         images: [
@@ -67,7 +84,10 @@ export const projects = [
             { src: dc8, alt: 'Category being populated with the image files just submitted' }
         ],
         descriptions: [
-            
+            'Consulted with client (professional clothing stylist) to understand needs.',
+            'Devised and implemented a web app and backend to manage and track closet items for stylist\'s clientele.',
+            'Planned and began implementing additional features, including an interactive outfit personalization tool.',
+            'Utilizing Node, Express, React, Styled Components, and MongoDB to construct application.'
         ]
     },
     {
@@ -85,7 +105,10 @@ export const projects = [
             { src: pmc9, alt: 'What it looks like when trying to check in with no scheduled attendance for the day' }
         ],
         descriptions: [
-        
+            'Consulted with Texas A&M\'s Parsons Mounted Cavalry organization to engineer a web application to schedule and track 100+ members\' daily activities.',
+            'Led several stand-up meetings every week as scrum master to monitor app progression and team contributions.',
+            'Prototyped and implemented the primary scheduling feature of the application using Ruby on Rails, including thorough unit and integration testing.',
+            'Employed a Heroku pipeline for continuous integration/continuous development to monitor project and ensure high quality software.'
         ]
     },
     {
@@ -100,7 +123,9 @@ export const projects = [
             { src: ph6, alt: 'Final view of order screen with all items and prices' },
         ],
         descriptions: [
-           
+           'Utilized the Agile Scrum methodology to lead a small team in producing a mock point-of-sale app for a restaurant.',
+           'Programmed full-stack features, compiled sprint backlogs, and developed burndown charts for each sprint.',
+           'Deployed and built application using Node, Express, React, Java, PostgreSQL, Git, and Figma'
         ]
     },
     {
