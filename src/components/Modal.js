@@ -2,7 +2,7 @@ import { Modal as ModalContainer } from '../styles/Modal';
 
 export default function Modal({isOpen, closeModal, image}) {
     // disable background scrolling when modal is open
-    document.querySelector('body').style.overflow = isOpen ? 'hidden' : 'auto';
+    // document.querySelector('body').style.overflow = isOpen ? 'hidden' : 'auto';
 
     return (
         <ModalContainer style={{ display: isOpen ? 'flex' : 'none' }} onClick={closeModal}>

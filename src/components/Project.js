@@ -63,7 +63,7 @@ export default function Project({ project }) {
                     }}
                 >
                     {project.images.map((image, index) => (
-                        <img src={image.src} alt={image.alt} key={index} />
+                        <img src={image.src} alt={image.alt} loading="lazy" key={index} />
                     ))}
                 </Carousel>
                 <div className="option-links">

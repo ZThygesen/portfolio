@@ -1,4 +1,5 @@
 import { Home as HomeContainer } from '../styles/Home';
+import { handleScroll } from '../App';
 import Headshot from '../images/headshot.jpg';
 import email from '../icons/email.svg';
 import linkedin from '../icons/linkedin.svg';
@@ -40,10 +41,10 @@ export default function Home() {
                         </a>
                     </div>
                 </div>
-                <div className="nav-links">
-                    <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#skills">Skills</a>
+                <div className="nav-buttons">
+                    <button onClick={() => handleScroll('experience')}>Experience</button>
+                    <button onClick={() => handleScroll('projects')}>Projects</button>
+                    <button onClick={() => handleScroll('skills')}>Skills</button>
                 </div>
             </div>
         </HomeContainer>

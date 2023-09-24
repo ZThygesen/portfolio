@@ -100,19 +100,19 @@ export const Home = styled.div`
         }
     }
 
-    .nav-links {
+    .nav-buttons {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
 
-        & a {
+        & button {
             width: 120px;
             text-align: center;
-            text-decoration: none;
             padding: 10px 0;
             background-color: var(--transparent-bg);
             border-radius: 12px;
+            cursor: pointer;
             transition: 0.2s;
 
             &:hover {

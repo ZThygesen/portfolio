@@ -24,13 +24,13 @@ export const Projects = styled.div`
             opacity: 0;
             transition: 1s all ease;
 
+            &:nth-of-type(4n + 3) {
+                transition-delay: 0.15s;
+            }
+
             &.animate {
                 transform: scale(1);
                 opacity: 1;
-            }
-
-            &:nth-of-type(4n + 3) {
-                transition-delay: 0.15s;
             }
         }
     }

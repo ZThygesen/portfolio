@@ -51,7 +51,7 @@ export default function Experience() {
                     </div>
                     <ul className="info">
                         <li><span className="bold">GPA:</span> 3.9/4.0; Minor in Mathematics</li>
-                        <li><span className="bold">Relevant Coursework:</span> Data Structures & Algorithms, Programming Studio, Software Engineering, Human-Computer Interaction</li>
+                        <li><span className="bold">Relevant Coursework:</span> Data Structures & Algorithms, Programming Languages, Programming Studio, Software Engineering, Human-Computer Interaction</li>
                         <li><span className="bold">Activities:</span> The Turing Games 2022, TAMUhack 2022, HowdyHack 2021, Google Developer Student Club, Aggie Coding Club</li>
                     </ul>
                 </div>
