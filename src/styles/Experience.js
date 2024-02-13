@@ -97,13 +97,13 @@ export const Experience = styled.div`
     @media (min-width: 481px) {
         .reveal-animation {
             position: relative;
-            transform: translateY(75px) rotateY(90deg) ;
+            transform: translateY(50px);
             transform-origin: top;
             opacity: 0;
-            transition: 1s all ease;
+            transition: 1.25s all ease;
 
             &.animate {
-                transform: translateY(0px) rotateY(0deg);
+                transform: translateY(0px);
                 opacity: 1;
                 box-shadow: none;
             }

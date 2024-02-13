@@ -7,9 +7,9 @@ const experiences = [
         company: 'American College of Radiology',
         location: 'Reston, VA (Remote)',
         info: [
-            'Collaborated with developers, UI/UX designers, business analysts, and stakeholders to develop the front end of multiple in-house applications.',
-            'Built engaging user interfaces that were accessible and responsive to various screen sizes and devices.',
-            'Leveraged knowledge in HTML, CSS, JavaScript, and Git while taking lead on various projects.'
+            'Collaborated with developers, UI/UX designers, business analysts, and stakeholders to contribute to the front-end development of multiple in-house applications.',
+            'Crafted engaging user interfaces, prioritizing accessibility and responsiveness across diverse screen sizes and devices.',
+            'Took the lead on various projects, leveraging knowledge in HTML, CSS, JavaScript, and Git.'
         ]
     },
     {
@@ -18,8 +18,8 @@ const experiences = [
         company: 'Arcanyx Technical Wizardry LLC',
         location: 'San Francisco, CA (Remote)',
         info: [
-            'Wrote clean, reusable, and well-tested code for a web application.',
-            'Met with tech lead weekly to discuss project progress, successes, and next milestones.',
+            'Wrote clean, reusable, and thoroughly tested code for a web application, ensuring high code quality standards.',
+            'Engaged with tech lead in weekly meetings to discuss project progress, highlight successes, and plan next milestones.',
             'Gained technical experience using Rust, TypeScript, MySQL, React, MaterialUI, gRPC, Tonic, and GitLab.'
         ]
     },
@@ -29,8 +29,8 @@ const experiences = [
         company: 'Aggie STEM MentorCorps',
         location: 'College Station, TX',
         info: [
-            'Managed and taught a grade school classroom of 30 students two weeks a month while fostering discussion of STEM concepts to increase student enthusiasm.',
-            'Coordinated experiments using Arduino boards, basic programming, and digital fabrication tools to enhance students’ STEM confidence and performance.'
+            'Managed and instructed a grade school classroom of 30 students for two weeks each month, fostering discussion of STEM concepts to increase student enthusiasm.',
+            'Coordinated hands-on experiments using Arduino boards, basic programming, and digital fabrication tools to enhance students\' STEM confidence and performance.'
         ]
     }
 ]

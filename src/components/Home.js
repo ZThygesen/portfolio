@@ -20,7 +20,7 @@ export default function Home() {
                             <h2>Hi, I'm Zach!</h2>
                             <p>
                                 I am a Senior Computer Science student at Texas A&M University with a passion for web development.
-                                Dedicated to creating elegant web applications with exceptional user interfaces, I am eager to leverage my strong foundation in software development to continue my career as a Front-End Developer.
+                                Dedicated to creating elegant web applications with exceptional user interfaces, I am eager to leverage my strong foundation in software development to continue my career as a Web Developer.
                             </p>
                         </div>
                     </div>

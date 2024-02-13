@@ -2,14 +2,14 @@ import battleship1 from './images/battleship/1.png';
 import battleship2 from './images/battleship/2.png';
 import battleship3 from './images/battleship/3.png';
 import battleship4 from './images/battleship/4.png';
-import dc1 from './images/digital_closet/1.png';
-import dc2 from './images/digital_closet/2.png';
-import dc3 from './images/digital_closet/3.png';
-import dc4 from './images/digital_closet/4.png';
-import dc5 from './images/digital_closet/5.png';
-import dc6 from './images/digital_closet/6.png';
-import dc7 from './images/digital_closet/7.png';
-import dc8 from './images/digital_closet/8.png';
+import vc1 from './images/virtual_closet/1.png';
+import vc2 from './images/virtual_closet/2.png';
+import vc3 from './images/virtual_closet/3.png';
+import vc4 from './images/virtual_closet/4.png';
+import vc5 from './images/virtual_closet/5.png';
+import vc6 from './images/virtual_closet/6.png';
+import vc7 from './images/virtual_closet/7.png';
+import vc8 from './images/virtual_closet/8.png';
 import hangman1 from './images/hangman/1.png';
 import hangman2 from './images/hangman/2.png';
 import hangman3 from './images/hangman/3.png';
@@ -56,39 +56,40 @@ export const projects = [
     {
         title: 'AI Central',
         descriptions: [
-            'Overhauled the HTML, CSS, and JavaScript for the ACR\'s existing AI Central website to revamp its looks and allow for monetization of application.',
-            'Engaged in several meetings with development, designing, and marketing teams to review the current state and direction of application progress.'
+            'Overhauled the HTML, CSS, and JavaScript for the ACR\'s existing AI Central website, revitalizing its aesthetic.',
+            'Actively participated in several meetings with development, design, and marketing teams to assess and steer the current status and direction of application progress.'
         ],
         disclaimer: 'Cannot provide images for this project as they contain proprietary information of the American College of Radiology.'
     },
     {
         title: 'Component Hub',
         descriptions: [
-            'Constructed a component library containing over 40 website components for use by all in-house software developers at the American College of Radiology to maintain consistent styling across applications.',
-            'Organized components into an intuitive, navigable, and well-documented application.',
-            'Displayed all relevant code with each component along with a copy feature to greatly reduce development time.'
+            'Engineered a comprehensive component library comprising over 40 website components, fostering uniform styling across applications for all in-house software developers at the American College of Radiology.',
+            'Orchestrated an intuitive, navigable, and well-documented application structure for efficient component management.',
+            'Displayed all relevant code with each component along with a copy feature, significantly reducing development time.'
         ],
         disclaimer: 'Cannot provide images for this project as they contain proprietary information of the American College of Radiology.'
     },
     {
-        title: 'Digital Closet',
-        codeLink: 'https://github.com/ZThygesen/digital-closet',
+        title: 'Virtual Closet',
+        codeLink: 'https://github.com/ZThygesen/virtual-closet',
         images: [
-            { src: dc1, alt: 'Home page of the app' },
-            { src: dc2, alt: 'Manage clients view' },
-            { src: dc3, alt: 'Main view of a client\'s digital closet: showing all items' },
-            { src: dc4, alt: 'Viewing specific category a client\'s items ' },
-            { src: dc5, alt: 'Viewing category with no items' },
-            { src: dc6, alt: 'Page where you can add image files to a category' },
-            { src: dc7, alt: 'Preview of the image files to be submitted' },
-            { src: dc8, alt: 'Category being populated with the image files just submitted' }
+            { src: vc1, alt: 'Home page of the app' },
+            { src: vc2, alt: 'Manage clients view' },
+            { src: vc3, alt: 'Main view of a client\'s virtual closet: showing all items' },
+            { src: vc4, alt: 'Page where you can add image files to a category' },
+            { src: vc5, alt: 'Page where you can move items into a canvas and create potential outfits' },
+            { src: vc6, alt: 'Preview of saving outfit from canvas' },
+            { src: vc7, alt: 'Page where you can view saved outfits including the one just created' },
+            { src: vc8, alt: 'Viewing the outfit as a full sized image' }
         ],
         descriptions: [
-            'Consulted with client (professional clothing stylist) to understand needs.',
-            'Devised and implemented a web app and backend to manage and track closet items for stylist\'s clientele.',
-            'Planned and began implementing additional features, including an interactive outfit personalization tool.',
-            'Utilizing Node, Express, React, Styled Components, and MongoDB to construct application.'
-        ]
+            'Collaborated with professional clothing stylist to identify and address their specific requirements.',
+            'Devised and created a web app and backend to efficiently manage and monitor wardrobe items for stylist\'s clientele.',
+            'Implemented interactive outfit canvas, enabling the stylist to create unique outfits using client\'s wardrobe items.',
+            'In progress: implementing user authentication for stylist\'s clientele to access personalized closets.',
+            'Utilizing Node, Express, React, Styled Components, MongoDB, and Google Cloud; hosted on Heroku.'
+        ]   
     },
     {
         title: 'Parsons Mounted Cavalry Attendance',
@@ -105,10 +106,10 @@ export const projects = [
             { src: pmc9, alt: 'What it looks like when trying to check in with no scheduled attendance for the day' }
         ],
         descriptions: [
-            'Consulted with Texas A&M\'s Parsons Mounted Cavalry organization to engineer a web application to schedule and track 100+ members\' daily activities.',
-            'Led several stand-up meetings every week as scrum master to monitor app progression and team contributions.',
-            'Prototyped and implemented the primary scheduling feature of the application using Ruby on Rails, including thorough unit and integration testing.',
-            'Employed a Heroku pipeline for continuous integration/continuous development to monitor project and ensure high quality software.'
+            'Consulted with Texas A&M\'s Parsons Mounted Cavalry organization to design and implement a web application for scheduling and tracking daily activities of 100+ members.',
+            'Assumed role of Scrum Master, leading regular stand-up meetings to monitor project progress and team contributions.',
+            'Prototyped and implemented the primary scheduling feature of the application using Ruby on Rails, incorporating comprehensive unit and integration testing.',
+            'Employed continuous integration/development pipeline on Heroku, ensuring delivery of high quality software.'
         ]
     },
     {
@@ -124,8 +125,8 @@ export const projects = [
         ],
         descriptions: [
            'Utilized the Agile Scrum methodology to lead a small team in producing a mock point-of-sale app for a restaurant.',
-           'Programmed full-stack features, compiled sprint backlogs, and developed burndown charts for each sprint.',
-           'Deployed and built application using Node, Express, React, Java, PostgreSQL, Git, and Figma'
+           'Programmed full-stack features, compiled sprint backlogs, and generated burndown charts to track spring progress.',
+           'Deployed and built application using Node, Express, React, Java, PostgreSQL, Git, and Figma.'
         ]
     },
     {
