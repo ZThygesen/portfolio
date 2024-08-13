@@ -19,7 +19,7 @@ export default function Home() {
                         <div className="about-text">
                             <h2>Hi, I'm Zach!</h2>
                             <p>
-                                I am a Senior Computer Science student at Texas A&M University with a passion for web development.
+                                I am a Computer Science graduate from Texas A&M University with a passion for web development.
                                 Dedicated to creating elegant web applications with exceptional user interfaces, I am eager to leverage my strong foundation in software development to continue my career as a Web Developer.
                             </p>
                         </div>
